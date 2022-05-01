@@ -1,0 +1,18 @@
+.wrapper {
+  border: solid black 3px;
+}
+.example-container .mat-form-field+.mat-form-field {
+  margin-left: 8px;
+}
+
+.example-container .mat-form-field {
+  width: 99%;
+
+}
+
+.example-container form {
+  }
+
+.example-container form>* {
+  margin: 5px 10px 5px 5px ;
+}

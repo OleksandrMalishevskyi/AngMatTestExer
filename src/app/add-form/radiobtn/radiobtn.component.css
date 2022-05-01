@@ -1,0 +1,7 @@
+.wrapper {
+  border: solid black 3px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
