@@ -12,10 +12,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InputComponent } from './add-form/input/input.component';
 import { CheckboxComponent } from './add-form/checkbox/checkbox.component';
 import { RadiobtnComponent } from './add-form/radiobtn/radiobtn.component';
-import { StarselectComponent } from './add-form/starselect/starselect.component';
+import { TriggerNameComponent } from './add-form/starselect/triggername.component';
 import { TestscompComponent } from './add-form/testscomp/testscomp.component';
 import { CheckselectComponent } from './add-form/checkselect/checkselect.component';
-
+import { SelectComponent } from './add-form/select/select.component';
+import { TextareaComponent } from './add-form/textarea/textarea.component';
+import { ChildComponent }   from './add-form/starselect/child.component';
+import { ConstraintNameComponent } from './add-form/starselect/constraintname.component'
+import { DeadLineInfoComponent } from './add-form/starselect/deadlineinfo.component'
+import {TriggerDateComponent} from './add-form/radiobtn/triggerdate.component'
+import {ConstaintValueComponent} from './add-form/radiobtn/Constaintvalue.compopnent'
 
 
 @NgModule({
@@ -27,9 +33,16 @@ import { CheckselectComponent } from './add-form/checkselect/checkselect.compone
     InputComponent,
     CheckboxComponent,
     RadiobtnComponent,
-    StarselectComponent,
+    TriggerNameComponent,
     TestscompComponent,
     CheckselectComponent,
+    SelectComponent,
+    TextareaComponent,
+    ChildComponent,
+    ConstraintNameComponent,
+    DeadLineInfoComponent,
+    TriggerDateComponent,
+    ConstaintValueComponent,
     
   ],
   imports: [

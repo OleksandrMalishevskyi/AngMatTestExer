@@ -1,15 +1,14 @@
 <div class="example-container">
   <form [formGroup]="options">
-    <mat-checkbox [formControl]="hideRequiredControl">Hide required marker</mat-checkbox>
+    <mat-checkbox [formControl]="hideRequiredControl">Is Interim Trigger?</mat-checkbox>
 
     <mat-form-field appearance="fill"
-        [hideRequiredMarker]="hideRequiredControl.value"
-        [floatLabel]="floatLabelControl.value">
-      <mat-select required>
-        <mat-option>-- None --</mat-option>
-        <mat-option value="option">Option</mat-option>
+        [hideRequiredMarker]="hideRequiredControl.value">
+      <mat-select >
+        <mat-option> Name 1 </mat-option>
+        <mat-option> Name 2 </mat-option>
       </mat-select>
-      <mat-label>TESETTTT</mat-label>
+      <mat-label>Interim Trigger Name</mat-label>
     </mat-form-field>
   </form>
 </div>

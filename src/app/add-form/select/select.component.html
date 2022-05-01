@@ -1,0 +1,8 @@
+<mat-form-field class="example-form" appearance="fill">
+    <mat-label><span>Related Processing Basis Reference Type</span></mat-label>
+    <mat-select>
+      <mat-option *ngFor="let element of elements" [value]="element.value">
+        {{element.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>

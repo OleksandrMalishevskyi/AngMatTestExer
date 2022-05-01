@@ -10,7 +10,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
-/** @title Input with a custom ErrorStateMatcher */
+
 
 @Component({
   selector: 'app-input',
@@ -19,7 +19,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class InputComponent  {
 
-    nameFormControl = new FormControl('', [Validators.required, Validators.minLength(4)]);
+    nameFormControl = new FormControl('', [Validators.required]);
   
     matcher = new MyErrorStateMatcher();
   }
