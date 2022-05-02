@@ -1,8 +1,13 @@
 <div class="example-container">
   <form [formGroup]="options">
-    <mat-checkbox [formControl]="hideRequiredControl">Is Interim Trigger?</mat-checkbox>
+    <mat-checkbox 
+    class="checkbox"
+    [formControl]="hideRequiredControl"
+    >Is Interim Trigger?</mat-checkbox>
 
-    <mat-form-field appearance="fill"
+    <mat-form-field 
+    class="optionfild"
+    appearance="fill"
         [hideRequiredMarker]="hideRequiredControl.value">
       <mat-select >
         <mat-option> Name 1 </mat-option>

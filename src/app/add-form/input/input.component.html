@@ -2,10 +2,10 @@
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Name</mat-label>
       <input 
-      type="text" 
+      type="text" ngModel
       matInput [formControl]="nameFormControl" 
       [errorStateMatcher]="matcher"
-      placeholder="">
+      placeholder="Oleksandr">
       
       <mat-error *ngIf="nameFormControl.hasError('required')">
         Name is required

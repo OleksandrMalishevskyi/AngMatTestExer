@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule} from '@angular/flex-layout'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,6 @@ import { InputComponent } from './add-form/input/input.component';
 import { CheckboxComponent } from './add-form/checkbox/checkbox.component';
 import { RadiobtnComponent } from './add-form/radiobtn/radiobtn.component';
 import { TriggerNameComponent } from './add-form/starselect/triggername.component';
-import { TestscompComponent } from './add-form/testscomp/testscomp.component';
 import { CheckselectComponent } from './add-form/checkselect/checkselect.component';
 import { SelectComponent } from './add-form/select/select.component';
 import { TextareaComponent } from './add-form/textarea/textarea.component';
@@ -21,8 +21,9 @@ import { ChildComponent }   from './add-form/starselect/child.component';
 import { ConstraintNameComponent } from './add-form/starselect/constraintname.component'
 import { DeadLineInfoComponent } from './add-form/starselect/deadlineinfo.component'
 import {TriggerDateComponent} from './add-form/radiobtn/triggerdate.component'
-import {ConstaintValueComponent} from './add-form/radiobtn/Constaintvalue.compopnent'
+import {ConstaintValueComponent} from './add-form/radiobtn/constaintvalue.compopnent'
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,6 @@ import {ConstaintValueComponent} from './add-form/radiobtn/Constaintvalue.compop
     CheckboxComponent,
     RadiobtnComponent,
     TriggerNameComponent,
-    TestscompComponent,
     CheckselectComponent,
     SelectComponent,
     TextareaComponent,
@@ -52,6 +52,8 @@ import {ConstaintValueComponent} from './add-form/radiobtn/Constaintvalue.compop
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
+    HttpClientModule,
 
   ],
   providers: [],

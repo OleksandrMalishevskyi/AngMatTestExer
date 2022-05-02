@@ -1,13 +1,11 @@
+
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
 
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+interface Option {
+  name: string;
   }
-}
+
 
 @Component({
   selector: 'app-add-form',
@@ -19,16 +17,35 @@ export class AddFormComponent implements OnInit {
 
 
   ngOnInit() {
-    this.form = new FormGroup ({
+    this.form = new FormGroup({
+      name: new FormControl(null, [
+        Validators.required,
+        Validators.minLength(4)
+      ]),
+      optionTrigger: new FormGroup ({
+        optionControl: new FormControl('', Validators.required),
+        
+        
+      })
       
     })
   }
 
-  nameFormControl = new FormControl('', [Validators.required, Validators.minLength(4)]);
-  
-  matcher = new MyErrorStateMatcher();
+
 
   submit() {
-    console.log('formsubmitted', this.form)
+    if (this.form.valid) {
+      console.log('Form: ', this.form)
+      const formData = {...this.form.value}
+
+      console.log('Form Data:', formData)
+    }
   }
+
+  options: Option[] = [
+    {name: 'Option 1 '},
+    {name: 'Option 2'},
+    {name: 'Option 3'},
+    {name: 'Option 4'},
+  ];
 }
