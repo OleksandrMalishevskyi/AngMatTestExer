@@ -24,6 +24,7 @@ import {TriggerDateComponent} from './add-form/radiobtn/triggerdate.component'
 import {ConstaintValueComponent} from './add-form/radiobtn/constaintvalue.compopnent'
 
 import { HttpClientModule } from '@angular/common/http';
+import { HttptestComponent } from './httptest/httptest.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     DeadLineInfoComponent,
     TriggerDateComponent,
     ConstaintValueComponent,
+    HttptestComponent,
     
   ],
   imports: [
