@@ -1,8 +1,8 @@
 
-import {LiveAnnouncer} from '@angular/cdk/a11y';
-import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
-import {MatSort, Sort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { MatSort, Sort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { HttpClient } from "@angular/common/http";
 
 export interface Todo {
@@ -19,34 +19,33 @@ export interface Todo {
 /**
  * @title Table with sorting
  */
- @Component({
+@Component({
   selector: 'app-sort-form',
   templateUrl: './sort-form.component.html',
   styleUrls: ['./sort-form.component.css']
 })
-export class SortFormComponent implements AfterViewInit, OnInit {
+export class SortFormComponent implements  OnInit {
   displayedColumns: string[] = ['name', 'description', 'isinterimtrigger', 'interimtrigger', 'lbmanEffectivedeadlineinfo', 'editable'];
   todos: Todo[] = []; //'name', 'description', 'isinterimtrigger', 'interimtrigger', 'lbmanEffectivedeadlineinfo', 'editable'
 
-  dataSource: any ;
+  dataSource: any;
 
 
   constructor(private _liveAnnouncer: LiveAnnouncer,
-              private httpClient: HttpClient) {}
+    private httpClient: HttpClient) { }
 
-              ngOnInit(){
-                this.httpClient.get<Todo[]>("assets/data.json").subscribe(data =>{
-                this.todos = data;
-                  console.log(this.todos)
-                  this.dataSource = new MatTableDataSource(data)
-                })
-              }              
+  ngOnInit() {
+    this.httpClient.get<Todo[]>("assets/data.json").subscribe(data => {
+      this.todos = data;
+      console.log(this.todos)
+      this.dataSource = new MatTableDataSource(this.todos)
+      this.dataSource.sort = this.sort;
+    })
+  }
 
   @ViewChild(MatSort) sort: MatSort;
 
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-  }
+
 
 
   announceSortChange(sortState: Sort) {
